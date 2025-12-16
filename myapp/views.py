@@ -8,9 +8,7 @@ class HomeView(View):
 class AboutView(View):
     def get(self,request):
         return render(request,'about.html')
-from django.views.decorators.csrf import csrf_exempt
 
-@method_decorator(csrf_exempt,name="dispatch")
 class ContactView(View):
     def get(self, request):
         return render(request, 'contact.html')
@@ -53,9 +51,7 @@ from myapp.forms import CallbackRequestForm
 from django.contrib import messages
 from django.conf import settings
 
-from django.views.decorators.csrf import csrf_exempt
 
-@csrf_exempt
 def callback_request(request):
     if request.method == "POST":
         form = CallbackRequestForm(request.POST)
