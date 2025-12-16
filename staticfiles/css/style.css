@@ -1,0 +1,354 @@
+/* style.css */
+
+/* Global Reset / Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333333;
+  background-color: #f9fcff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Navbar / Header */
+header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0066cc; /* light-blue accent */
+}
+
+.navbar nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar nav ul li a {
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  transition: background-color 0.2s, color 0.2s;
+  font-size: 1rem;
+  color: #004a99;
+}
+
+.navbar nav ul li a:hover,
+.navbar nav ul li a:focus {
+  background-color: #e6f2ff;
+  color: #0066cc;
+}
+
+/* Mobile / Responsive Navbar Toggle */
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #e6f9ff;
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: #0066cc;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.125rem;
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+  color: #333333;
+}
+
+.btn-cta {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #0066cc;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-cta:hover,
+.btn-cta:focus {
+  background-color: #005bb5;
+}
+
+/* Services / Cards Section */
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.service-item {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 1.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.service-item:hover,
+.service-item:focus {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.service-item h3 {
+  margin-bottom: 1rem;
+  color: #004a99;
+}
+
+.service-item p {
+  color: #555555;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Text content, headings, lists */
+h1, h2, h3, h4, h5, h6 {
+  color: #004a99;
+  margin-bottom: 0.75rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+ul {
+  margin: 0.5rem 0 1rem 1.25rem;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Form Styles (Contact) */
+form {
+  margin-top: 1.5rem;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="subject"],
+form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-top: 0.25rem;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #0066cc;
+  box-shadow: 0 0 4px rgba(0,102,204,0.2);
+}
+
+form button[type="submit"] {
+  padding: 0.75rem 1.5rem;
+  background-color: #0066cc;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+form button[type="submit"]:hover,
+form button[type="submit"]:focus {
+  background-color: #005bb5;
+}
+
+/* Footer */
+footer {
+  background-color: #ffffff;
+  border-top: 1px solid #e0e0e0;
+  padding: 2rem 1.5rem;
+  margin-top: 4rem;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  color: #555555;
+  font-size: 0.9rem;
+}
+
+.footer-content a {
+  color: #0066cc;
+}
+
+.footer-content a:hover,
+.footer-content a:focus {
+  text-decoration: underline;
+}
+
+/* Responsive / Mobile */
+@media (max-width: 768px) {
+  .navbar nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: #ffffff;
+    position: absolute;
+    top: 58px;
+    right: 1.5rem;
+    width: 200px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    padding: 1rem;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+// main.js
+
+document.addEventListener('DOMContentLoaded', () => {
+  const toggleButton = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  const navLinkItems = document.querySelectorAll('.nav-links a');
+
+  function openMenu() {
+    navLinks.classList.add('open');
+    toggleButton.setAttribute('aria-expanded', 'true');
+    toggleButton.setAttribute('aria-label', 'Close menu');
+  }
+
+  function closeMenu() {
+    navLinks.classList.remove('open');
+    toggleButton.setAttribute('aria-expanded', 'false');
+    toggleButton.setAttribute('aria-label', 'Open menu');
+  }
+
+  toggleButton.addEventListener('click', () => {
+    const expanded = toggleButton.getAttribute('aria-expanded') === 'true';
+    if (expanded) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  // Close menu when any nav link is clicked (on mobile)
+  navLinkItems.forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth <= 768) {
+        closeMenu();
+      }
+    });
+  });
+
+  // Optional: close menu when clicking outside (mobile)
+  document.addEventListener('click', (e) => {
+    if (window.innerWidth <= 768) {
+      const isClickInside = e.target.closest('nav.navbar');
+      if (!isClickInside && navLinks.classList.contains('open')) {
+        closeMenu();
+      }
+    }
+  });
+
+  // Handle window resize — reset menu as per screen width
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+      navLinks.classList.remove('open');
+      navLinks.style.maxHeight = null;
+      toggleButton.setAttribute('aria-expanded', 'false');
+      toggleButton.setAttribute('aria-label', 'Open menu');
+    }
+  });
+});
+.all-title-box {
+  background-color: #2a1a4c; /* dark/purple-ish background — adjust per your theme */
+  /* optionally use a gradient or image background instead */
+  color: white;
+}
+
+.all-title-box .breadcrumb {
+  background: none;
+  padding: 0;
+  margin: 0;
+}
+
+.all-title-box .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+  content: "›"; /* or "/" or any separator you like */
+  color: #ccc;
+  margin: 0 0.5rem;
+}
+.all-title-box .breadcrumb .breadcrumb-item a {
+  color: #ffffff;
+}
+.all-title-box .breadcrumb .breadcrumb-item.active {
+  color: #dddddd;
+}
+.all-title-box.page-header-banner {
+  background-image: url("{% static 'img/about-banner.jpg' %}"); /* path to your banner image */
+  background-size: cover;       /* ensures image covers area */
+  background-position: center;  /* centres the image nicely */
+  background-repeat: no-repeat;
+  min-height: 250px;            /* adjust height as needed for good header area */
+  display: flex;
+  align-items: center;          /* vertical center of title text */
+  color: white;                 /* text color for readability */
+}
+
+/* Optional: overlay to darken background for better text readability */
+.all-title-box.page-header-banner::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* dark overlay */
+  z-index: 0;
+}
+.all-title-box.page-header-banner .container {
+  position: relative;
+  z-index: 1;  /* so text is above overlay */
+}

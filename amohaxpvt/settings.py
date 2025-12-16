@@ -74,9 +74,17 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'amohaxpvt.wsgi.application'
+STATIC_URL = "/static/"
 
-
+# Where collectstatic will put all static files
 STATIC_ROOT = BASE_DIR / "staticfiles"
+
+# Optional (recommended) for compressed hashed static files
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
+
 STATIC_URL = "/static/"
 
 
