@@ -1,0 +1,280 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Amohax Tech Lab – Home{% endblock %}
+
+{% block content %}
+
+<!-- Hero Carousel -->
+<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'img/hm3.jpg' %}" class="d-block w-100 img-fluid" alt="Slide 1">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'img/fixban2.jpg' %}" class="d-block w-100 img-fluid" alt="Slide 2">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'img/fixb3.jpg' %}" class="d-block w-100 img-fluid" alt="Slide 3">
+    </div>
+  </div>
+
+  <button class="carousel-control-prev" type="button"
+          data-bs-target="#heroCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+
+  <button class="carousel-control-next" type="button"
+          data-bs-target="#heroCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<!-- Services Overview -->
+<!-- Company Overview + Gallery -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-center gx-5">
+
+      <!-- Text Column -->
+      <div class="col-md-6">
+        <h2 class="text-primary mb-4">Who We Are</h2>
+        <p class="mb-4">
+          Amohax Tech Lab Pvt. Ltd. is a technology-driven company delivering professional IT services and digital solutions. We build modern web and software products, mobile applications, cloud-based solutions and support services — all with a commitment to quality, reliability and innovation.
+        </p>
+        <p class="mb-4">
+          Our goal is to help businesses transform through technology — whether it's a sleek website, an intuitive mobile app, or a scalable cloud infrastructure. We believe in transparency, professionalism, and delivering real value to our clients.
+        </p>
+        <a href="{% url 'services' %}" class="btn btn-primary">Explore Services</a>
+      </div>
+
+      <!-- Gallery / Image Column -->
+      <div class="col-md-6">
+        <div class="row g-3">
+          <div class="col-6">
+            <img src="{% static 'img/tech.png' %}" class="img-fluid rounded shadow-sm" alt="Tech Office">
+          </div>
+          <div class="col-6">
+            <img src="{% static 'img/team.png' %}" class="img-fluid rounded shadow-sm" alt="Team Collaboration">
+          </div>
+          <div class="col-6">
+            <img src="{% static 'img/software.png' %}" class="img-fluid rounded shadow-sm" alt="Software Development">
+          </div>
+          <div class="col-6">
+            <img src="{% static 'img/client.png' %}" class="img-fluid rounded shadow-sm" alt="Cloud Services">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center text-primary mb-5">Our Services</h2>
+    <div class="row g-4">
+      <!-- Example card — Web Development -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <img src="{% static 'img/webdevelop.png' %}" height="300px" class="card-img-top" alt="Web Development">
+          <div class="card-body">
+            <h5 class="card-title">Web Development</h5>
+            <p class="card-text">Modern, responsive websites tailored to your business needs.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Repeat other services cards... -->
+      <!-- Mobile Apps card -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <img src="{% static 'img/mobile.png' %}" height="300px" class="card-img-top" alt="Mobile Apps">
+          <div class="card-body">
+            <h5 class="card-title">Mobile Apps</h5>
+            <p class="card-text">Native and cross-platform apps for Android & iOS.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Software Solutions card -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <img src="{% static 'img/solutions.png' %}" height="300px" class="card-img-top" alt="Software Solutions">
+          <div class="card-body">
+            <h5 class="card-title">Software Solutions</h5>
+            <p class="card-text">Custom software to streamline operations and boost productivity.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Cloud & DevOps card -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <img src="{% static 'img/devops.png' %}" height="300px" class="card-img-top" alt="Cloud Services & DevOps">
+          <div class="card-body">
+            <h5 class="card-title">Cloud Services & DevOps</h5>
+            <p class="card-text">Scalable cloud architecture, hosting, maintenance and DevOps workflows.</p>
+          </div>
+        </div>
+      </div>
+      <!-- UI/UX & APIs card -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <img src="{% static 'img/API.jpg' %}" height="300px" class="card-img-top" alt="UI/UX & APIs">
+          <div class="card-body">
+            <h5 class="card-title">UI/UX & APIs</h5>
+            <p class="card-text">User-centric design and robust API integration.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Maintenance & Cybersecurity card -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <img src="{% static 'img/cyber security.webp' %}" height="300px" class="card-img-top" alt="Maintenance & Cybersecurity">
+          <div class="card-body">
+            <h5 class="card-title">Maintenance & Cybersecurity</h5>
+            <p class="card-text">Ongoing support, security services and system maintenance.</p>
+          </div>
+        </div>
+      </div>
+      <!-- R&D card -->
+
+
+    </div>
+
+  </div>
+
+</section>
+<section class="py-5" style="background: #0a4bb0;">
+    <div class="container">
+        <h2 class="text-center mb-5 fw-bold text-white">
+            Who we work for and create a digital support community for
+        </h2>
+
+        <div class="row g-4 text-center">
+
+            <!-- Item Template (Repeated for each item) -->
+            <div class="col-md-4">
+                <div class="p-4 bg-white rounded shadow-sm h-100 card-box">
+                    <i class="bi bi-gear fs-1 text-primary mb-3"></i>
+                    <h5 class="fw-bold text-dark">Civil society organizations</h5>
+                    <p class="small text-muted mb-0">
+                        We help NGOs implement digital tools like websites, dashboards, or CRMs.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="p-4 bg-white rounded shadow-sm h-100 card-box">
+                    <i class="bi bi-people fs-1 text-primary mb-3"></i>
+                    <h5 class="fw-bold text-dark">Initiative groups lacking tech support</h5>
+                    <p class="small text-muted mb-0">
+                        We guide where to start and what can be achieved even without a budget.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="p-4 bg-white rounded shadow-sm h-100 card-box">
+                    <i class="bi bi-easel fs-1 text-primary mb-3"></i>
+                    <h5 class="fw-bold text-dark">Educational project creators</h5>
+                    <p class="small text-muted mb-0">
+                        We support designing and structuring digital learning formats.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="p-4 bg-white rounded shadow-sm h-100 card-box">
+                    <i class="bi bi-person-workspace fs-1 text-primary mb-3"></i>
+                    <h5 class="fw-bold text-dark">Internship Programs</h5>
+                    <p class="small text-muted mb-0">
+                        Opportunities to contribute to real social impact projects.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="p-4 bg-white rounded shadow-sm h-100 card-box">
+                    <i class="bi bi-grid-3x3 fs-1 text-primary mb-3"></i>
+                    <h5 class="fw-bold text-dark">Local communities</h5>
+                    <p class="small text-muted mb-0">
+                        Support for digital transformation and modernization.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="p-4 bg-white rounded shadow-sm h-100 card-box">
+                    <i class="bi bi-diagram-3 fs-1 text-primary mb-3"></i>
+                    <h5 class="fw-bold text-dark">Social & Volunteer Initiatives</h5>
+                    <p class="small text-muted mb-0">
+                        Technical structure for growing social projects.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="p-4 bg-white rounded shadow-sm h-100 card-box">
+                    <i class="bi bi-laptop fs-1 text-primary mb-3"></i>
+                    <h5 class="fw-bold text-dark">IT Professionals & Mentors</h5>
+                    <p class="small text-muted mb-0">
+                        Share technical knowledge for a good cause.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="p-4 bg-white rounded shadow-sm h-100 card-box">
+                    <i class="bi bi-people-fill fs-1 text-primary mb-3"></i>
+                    <h5 class="fw-bold text-dark">Business partners</h5>
+                    <p class="small text-muted mb-0">
+                        Technology support for social change and innovation.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row align-items-center bg-white shadow-sm rounded-4 p-4">
+
+            <!-- Left Text -->
+            <div class="col-md-6">
+                <h2 class="fw-bold mb-3 text-primary">Who we are and our mission</h2>
+
+                <p><strong>Amohax Tech Lab Pvt.Ltd</strong> is a organization that brings together IT specialists, designers, educators, and partners to support socially beneficial initiatives through technology.</p>
+
+                <p>We help communities, organizations, and projects to implement digital solutions clearly and effectively — from idea to launch.</p>
+
+                <p>Our mission is to make technology accessible to those who are changing the world.</p>
+
+                <p>Amohax Tech Lab has been involved in mobile and web app development for 2 years+ and is ready to share its expertise.</p>
+
+                <a href="{% url 'about' %}" class="btn btn-primary px-4 py-2 rounded-pill">
+                    Learn More About Us
+                </a>
+            </div>
+
+            <!-- Right Image -->
+            <div class="col-md-6 text-center">
+                <img src="{% static 'img/our mission.jpg' %}"
+                     class="img-fluid rounded-3" alt="Mission Image">
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us / Mission + CTA -->
+<section class="bg-light text-center">
+  <div class="container">
+    <h2 class="text-primary mb-4">Why Choose Us</h2>
+    <p class="mb-4">We combine technical excellence, professionalism and commitment to deliver reliable digital solutions that help your business grow.</p>
+    <a href="{% url 'contact' %}" class="btn btn-primary btn-lg mb-3">Get in Touch</a>
+  </div>
+</section>
+
+{% endblock %}

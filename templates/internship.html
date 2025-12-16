@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Internship & Training – Amohax Tech Lab{% endblock %}
+
+{% block content %}
+
+<section class="internship-hero d-flex align-items-center justify-content-center text-center text-white">
+    <div class="container">
+        <h1 class="fw-bold display-5 text-light">Need a PLAN !!<br>That Works?</h1>
+        <div class="mt-4 internship-options">
+
+            <a href="#" class="intern-btn">Software Development Internship</a>
+            <a href="#" class="intern-btn">Fullstack Development Internship</a>
+            <a href="#" class="intern-btn">Mobile App Development Internship</a>
+            <a href="#" class="intern-btn">Data Science Internship</a>
+            <a href="#" class="intern-btn">Cyber Security Internship</a>
+            <a href="#" class="intern-btn">AI & Cloud Internship</a>
+
+        </div>
+
+        <a href="{% url 'contact' %}" class="btn join-btn mt-4">Join Now!</a>
+
+        <div class="mt-4 small">
+            <strong>www.amohax.com</strong> &nbsp;&nbsp; | &nbsp;&nbsp;
+            <strong>8589865797</strong>
+        </div>
+    </div>
+</section>
+<!-- Intro + Floating Image-Icons Section -->
+<section class="internship-intro text-center">
+  <div class="container position-relative">
+    <h2 class="mb-4">Why Join Our Internship Program?</h2>
+    <p class="lead mb-5">
+      At Amohax Tech Lab, our internships are designed to give you <b>real-world, hands-on experience.</b>
+      From Web Development to Mobile Apps, Cloud, Data Science, and UI/UX — you’ll work on meaningful projects,
+      use modern tools, and build your portfolio under experienced mentorship.
+    </p>
+
+    <!-- Floating image-icons — you can replace URLs or use local static images -->
+    <img src="{% static 'img/jssicon.png' %}"
+         class="drift-icon" style="left: 10%; top: 25%;" alt="JS Logo">
+    <img src="{% static 'img/pythonicon.webp' %}"
+         class="drift-icon" style="left: 35%; top: 60%;" alt="Python Logo">
+    <img src="{% static 'img/angularicon.svg' %}"
+         class="drift-icon" style="left: 70%; top: 30%;" alt="Angular Icon">
+    <img src="{% static 'img/dbicon.png' %}"
+         class="drift-icon" style="left: 85%; top: 55%;" alt="Database Icon">
+
+  </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="row g-4">
+
+            <div class="col-md-6 col-lg-4">
+                <div class="projector-card">
+                    <h5>Web Development Internship</h5>
+                    <p>Learn to build professional websites using Django, React & APIs.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="projector-card">
+                    <h5>Mobile App Development Internship</h5>
+                    <p>Develop cross-platform apps using Flutter or React Native.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="projector-card">
+                    <h5>Cloud & DevOps Internship</h5>
+                    <p>Hands-on AWS, CI/CD pipelines, Docker & Kubernetes.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="projector-card">
+                    <h5>UI / UX Design Internship</h5>
+                    <p>Create beautiful user-friendly interfaces using Figma.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="projector-card">
+                    <h5>Data Science Internship</h5>
+                    <p>Real-world analytics projects using Python & Machine Learning.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="projector-card">
+                    <h5>AI & Cloud R&D Internship</h5>
+                    <p>Explore innovation in cloud-based intelligent applications.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+ <div class="mt-4 text-center">
+      <p>Interested? Please <a href="{% url 'contact' %}" class="text-decoration-none">contact us</a> or fill out our contact form to enquire about availability.</p>
+    </div>
+
+
+
+
+
+
+{% endblock %}

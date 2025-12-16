@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Contact – Amohax Tech Lab{% endblock %}
+
+{% block content %}
+<!-- Banner + Title + Breadcrumb -->
+<div class="all-title-box position-relative banner-box">
+  <div class="banner-bg"></div>
+  <div class="banner-overlay"></div>
+  <div class="banner-overlay-text position-absolute top-50 start-50 translate-middle text-center text-white px-3">
+    <h2 class="display-5 fw-bold text-light">Contact Us</h2>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb justify-content-center mb-0">
+        <li class="breadcrumb-item">
+          <a href="{% url 'home' %}" class="text-light text-decoration-none">Home</a>
+        </li>
+        <li class="breadcrumb-item active text-light" aria-current="page">Contact</li>
+      </ol>
+    </nav>
+  </div>
+</div>
+
+<section class="container">
+  <div class="contact-wrapper">
+
+    <!-- LEFT COLUMN: Info + Office Image -->
+    <div class="contact-info">
+      <h4>Get in Touch</h4>
+  <ul class="list-unstyled">
+    <li><i class="fas fa-map-marker-alt me-2 text-primary"></i>
+        <strong>Address:</strong><br>
+        No 392, Poothamcode Rd, Nellimoodu, Thiruvananthapuram, Kerala – 695123
+    </li>
+    <li><i class="fas fa-phone me-2 text-primary"></i>
+        <strong>Phone:</strong> <a href="tel:+918281576727">+91-8281576727</a>
+    </li>
+    <li><i class="fas fa-envelope me-2 text-primary"></i>
+        <strong>Email:</strong> <a href="mailto:info@amohax.com">info@amohax.com</a>
+    </li>
+  </ul>
+
+      <!-- Office / Map / Image -->
+      <div class="mt-4">
+        <img src="{% static 'img/officeamohax.png' %}"
+             alt="Amohax Tech Lab Office" class="img-fluid">
+      </div>
+    </div>
+
+    <!-- RIGHT COLUMN: Contact Form -->
+    <div class="contact-form">
+      <h4 class="mb-4">Send Us a Message</h4>
+      <form method="post" action="">
+        {% csrf_token %}
+        <div class="mb-3">
+          <label for="name" class="form-label">Name *</label>
+          <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email *</label>
+          <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="mb-3">
+          <label for="phone" class="form-label">Phone</label>
+          <input type="text" class="form-control" id="phone" name="phone">
+        </div>
+        <div class="mb-3">
+          <label for="subject" class="form-label">Subject</label>
+          <input type="text" class="form-control" id="subject" name="subject">
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Message *</label>
+          <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+{% endblock %}
+

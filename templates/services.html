@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Services – Amohax Tech Lab{% endblock %}
+
+{% block content %}
+<!-- Banner + Title + Breadcrumb -->
+<div class="all-title-box position-relative banner-box">
+  <div class="banner-bg"></div>
+  <div class="banner-overlay"></div>
+  <div class="banner-overlay-text position-absolute top-50 start-50 translate-middle text-center text-white px-3">
+    <h2 class="display-5 fw-bold text-light">About Us</h2>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb justify-content-center mb-0">
+        <li class="breadcrumb-item">
+          <a href="{% url 'home' %}" class="text-light text-decoration-none">Home</a>
+        </li>
+        <li class="breadcrumb-item active text-light" aria-current="page">About Us</li>
+      </ol>
+    </nav>
+  </div>
+</div>
+
+<section class="py-5">
+    <div class="container">
+
+        <h2 class="fw-bold text-primary text-center mb-4">Our Services</h2>
+
+        <div class="row g-4">
+
+            <div class="col-md-6 col-lg-4">
+                <div class="projector-card">
+                    <h5>Web Development</h5>
+                    <p>Custom websites using latest technologies — SEO-friendly, fast loading and tailored to grow your online presence.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="projector-card">
+                    <h5>Mobile Apps</h5>
+                    <p>Developing high performance Android & iOS mobile applications with intuitive and scalable UI.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="projector-card">
+                    <h5>Software Solutions</h5>
+                    <p>Enterprise-grade software to automate business operations and improve digital efficiency.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="projector-card">
+                    <h5>Cloud Services & DevOps</h5>
+                    <p>Complete cloud migration, CI/CD automation, containerization and secure cloud infrastructure management.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="projector-card">
+                    <h5>UI/UX & APIs</h5>
+                    <p>Human-centered design paired with powerful API integrations to connect and scale your digital ecosystem.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="projector-card">
+                    <h5>Maintenance & Cybersecurity</h5>
+                    <p>Continuous monitoring, timely updates and advanced threat protection to safeguard your systems.</p>
+                </div>
+            </div>
+
+            <div class="col-md-12 col-lg-6 mx-auto">
+                <div class="projector-card">
+                    <h5>R&D Services</h5>
+                    <p>Innovative technology research and prototyping to future-proof your business with cutting-edge solutions.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+{% endblock %}

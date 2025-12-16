@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}About Us – Amohax Tech Lab{% endblock %}
+
+{% block content %}
+ <!-- Banner + Title + Breadcrumb -->
+<div class="all-title-box position-relative banner-box">
+  <div class="banner-bg"></div>
+  <div class="banner-overlay"></div>
+  <div class="banner-overlay-text position-absolute top-50 start-50 translate-middle text-center text-white px-3">
+    <h2 class="display-5 fw-bold text-light">About Us</h2>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb justify-content-center mb-0">
+        <li class="breadcrumb-item">
+          <a href="{% url 'home' %}" class="text-light text-decoration-none">Home</a>
+        </li>
+        <li class="breadcrumb-item active text-light" aria-current="page">About Us</li>
+      </ol>
+    </nav>
+  </div>
+</div>
+
+
+  <section class="py-5">
+    <div class="container text-center mb-5">
+      <h1 class="text-primary mb-4">Provide Quality Services For Our Clients</h1>
+      <p class="text-justify">Amohax Tech Lab Pvt. Ltd. is a technology-driven company delivering professional IT services and digital solutions. Our mission is to help businesses transform with technology.</p>
+    </div>
+
+    <!-- Vision Section with image -->
+    <div class="container mb-5">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <img src="{% static 'img/vision.jpg' %}" class="img-fluid rounded" alt="Our Vision">
+        </div>
+        <div class="col-md-6">
+          <h2>Our Vision</h2>
+          <p>Deliver innovation-driven IT solutions that empower businesses to succeed in a rapidly evolving digital world.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mission Section with image (image on right for variety) -->
+    <div class="container mb-5">
+      <div class="row align-items-center flex-md-row-reverse">
+        <div class="col-md-6">
+          <img src="{% static 'img/ourmission.jpg' %}" class="img-fluid rounded" alt="Our Mission">
+        </div>
+        <div class="col-md-6">
+          <h2>Our Mission</h2>
+          <p>Provide world-class web, mobile, software and cloud solutions with integrity, professionalism, and commitment to excellence.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Values Section with images gallery / grid -->
+    <div class="container">
+      <h2 class="mb-4">Our Values</h2>
+      <div class="row g-4">
+        <div class="col-sm-6 col-lg-4">
+          <div class="card h-100 border-0 shadow-sm">
+            <img src="{% static 'img/values.jpg' %}" height="250px" class="card-img-top" alt="Professionalism & Integrity">
+            <div class="card-body">
+              <h5 class="card-title">Professionalism & Integrity</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="card h-100 border-0 shadow-sm">
+            <img src="{% static 'img/quality.jpg' %}" height="250px" class="card-img-top" alt="Quality & Reliability">
+            <div class="card-body">
+              <h5 class="card-title">Quality & Reliability</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="card h-100 border-0 shadow-sm">
+            <img src="{% static 'img/continuous_innovation.jpg.webp' %}" height="250px" class="card-img-top" alt="Innovation & Learning">
+            <div class="card-body">
+              <h5 class="card-title">Innovation & Continuous Learning</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="card h-100 border-0 shadow-sm">
+            <img src="{% static 'img/customer-focus.png' %}" height="250px" class="card-img-top" alt="Customer-Centric Approach">
+            <div class="card-body">
+              <h5 class="card-title">Customer-Centric Approach</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="card h-100 border-0 shadow-sm">
+            <img src="{% static 'img/trust.webp' %}" height="250px" class="card-img-top" alt="Transparency & Trust">
+            <div class="card-body">
+              <h5 class="card-title">Transparency & Trust</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- Back to Top Button -->
+
+  </section>
+<section class="py-5">
+    <div class="container">
+
+        <div class="mission-box p-4 shadow-sm bg-white rounded-4">
+            <div class="d-flex align-items-center mb-3">
+                <i class="bi bi-bullseye text-primary fs-2 me-3"></i>
+                <h3 class="fw-bold mb-0">Our Mission</h3>
+            </div>
+
+            <p class="text-muted">
+                At Amohax Tech Lab, our mission is to transform ideas into reliable, high-quality digital solutions that drive growth and efficiency for our clients. We commit to using modern technologies, best practices, and continuous learning to build responsive web and mobile applications, secure cloud infrastructures, and software systems that solve real business problems. We believe in transparency, professionalism, and delivering solutions that not only meet — but exceed — expectations, helping our clients succeed in a rapidly evolving digital world.
+            </p>
+        </div>
+
+    </div>
+</section>
+{% endblock %}
